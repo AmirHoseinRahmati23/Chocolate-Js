@@ -1,14 +1,11 @@
 # 🍫 Chocolate.js
-
 **Vanilla JS? NO! I like mine with Chocolate!**  
 A tiny helper library in **one file**. Completely syntax sugar!
-
 
 ---
 
 ## Features
 ## Features
-
 - `$()` – shorthand for `document.querySelector()`  
 - `$$()` – shorthand for `document.querySelectorAll()`  
 - `listenTo()` – attach event listeners easily  
@@ -21,8 +18,12 @@ A tiny helper library in **one file**. Completely syntax sugar!
 ---
 
 ## Installation
-
 Just include the script in your HTML:
-
 ```html
 <script src="chocolate.js"></script>
+```
+
+---
+
+## Contributors
+- [@Ardelyo](https://github.com/Ardelyo) - Added documentation improvements
