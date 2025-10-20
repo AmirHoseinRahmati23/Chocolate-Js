@@ -1,36 +1,37 @@
-(function (global) {
-
-    const $ = (selector) => document.querySelector(selector);
-    const $$ = (selector) => document.querySelectorAll(selector);
-  
-    const listenTo = (selector, event, handler) => {
-      $$(selector).forEach(el => el.addEventListener(event, handler));
-    };
-  
-    function createEl(tag, attrs = {})
-    {
-      const el = document.createElement(tag);
-      Object.entries(attrs).forEach(([key, value]) => {
-        if (key === 'text') el.textContent = value;
-        else el.setAttribute(key, value);
-      });
-      return el;
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD (like RequireJS)
+        define([], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node.js / CommonJS
+        module.exports = factory();
+    } else {
+        // Browser global
+        root.Chocolate = factory();
     }
-  
-    function appendEl(element, target, isElement = true)
-    {
-        if (!isElement) {
-            // if it's not an element then it's a selector!
-            target = $(target);
-        }
-        target.appendChild(element);
+}(typeof self !== 'undefined' ? self : this, function () {
+
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => root.querySelectorAll(selector);
+
+    const listenTo = (selector, event, handler, root = document) => {
+        $$(selector, root).forEach(el => el.addEventListener(event, handler));
     };
 
-    global.$ = $;
-    global.$$ = $$;
-    global.listenTo = listenTo;
-    global.createEl = createEl;
-    global.appendEl = appendEl;
+    function createEl(tag, attrs = {}, root = document) {
+        const el = root.createElement(tag);
+        Object.entries(attrs).forEach(([key, value]) => {
+            if (key === 'text') el.textContent = value;
+            else el.setAttribute(key, value);
+        });
+        return el;
+    }
 
-})(window);
-  
+    function appendEl(element, target, isElement = true, root = document) {
+        if (!isElement) target = $(target, root);
+        target.appendChild(element);
+    }
+
+    return { $, $$, listenTo, createEl, appendEl };
+
+}));

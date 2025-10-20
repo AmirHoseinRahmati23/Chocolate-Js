@@ -1,0 +1,25 @@
+{
+  "name": "js-chocolate",
+  "version": "0.0.1",
+  "description": "Vanilla JS? NO! I like mine with Chocolate! A tiny helper library in one file. Completely syntax sugar!",
+  "main": "chocolate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmirHoseinRahmati23/Chocolate-Js.git"
+  },
+  "keywords": [
+    "js",
+    "chocolate",
+    "library",
+    "minimal"
+  ],
+  "author": "amirhosein rahamti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmirHoseinRahmati23/Chocolate-Js/issues"
+  },
+  "homepage": "https://github.com/AmirHoseinRahmati23/Chocolate-Js#readme"
+}
