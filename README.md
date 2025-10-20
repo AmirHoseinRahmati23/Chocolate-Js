@@ -59,5 +59,5 @@ Now Chocolate.js is ready to sweeten your code, no matter where you use it! 🍫
 ---
 
 ## Contributors
-- [@AmirHosein_Rahmati23]() - Started the whole thing!
+- [@AmirHosein_Rahmati23](https://github.com/AmirhoseinRahmati23) - Started the whole thing!
 - [@Ardelyo](https://github.com/Ardelyo) - Added documentation improvements.
