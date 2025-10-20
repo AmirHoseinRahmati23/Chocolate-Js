@@ -5,7 +5,6 @@ A tiny helper library in **one file**. Completely syntax sugar!
 ---
 
 ## Features
-## Features
 - `$()` – shorthand for `document.querySelector()`  
 - `$$()` – shorthand for `document.querySelectorAll()`  
 - `listenTo()` – attach event listeners easily  
@@ -60,4 +59,5 @@ Now Chocolate.js is ready to sweeten your code, no matter where you use it! 🍫
 ---
 
 ## Contributors
-- [@Ardelyo](https://github.com/Ardelyo) - Added documentation improvements
+- [@AmirHosein_Rahmati23]() - Started the whole thing!
+- [@Ardelyo](https://github.com/Ardelyo) - Added documentation improvements.
